@@ -26,7 +26,7 @@ namespace DVLD.People
         public delegate void DataBackEventHandler(object sender, int PersonID);
 
         // Declare an event using the delegate
-        public event GetPersonID PersonIDBack;
+        public event DataBackEventHandler PersonIDBack;
 
         public enum enMode { AddNew, Update };
 
@@ -124,7 +124,7 @@ namespace DVLD.People
             txtPhone.Text = _Person.Phone;
             dtpDateOfBirth.Value = _Person.DateOfBirth;
 
-            if (_Person.Gender == (short)clsPerson.enGender.Male)
+            if (_Person.Gender == (byte)clsPerson.enGender.Male)
                 rbMale.Checked = true;
             else
                 rbFemale.Checked = true;

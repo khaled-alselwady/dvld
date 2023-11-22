@@ -68,7 +68,6 @@ namespace DVLD.Login
                 //in case the user is not active
                 if (!user.IsActive)
                 {
-
                     txtUserName.Focus();
                     MessageBox.Show("Your account is not Active, Contact Admin.", 
                         "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);

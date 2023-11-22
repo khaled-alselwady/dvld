@@ -73,6 +73,7 @@ namespace DVLD.User
         {
             // Fill Person Info
             ucPersonCard1.LoadPersonInfo(_User.PersonID);
+            _PersonID = ucPersonCard1.PersonID;
 
             // Fill User Info
             lblUserID.Text = _User.UserID.ToString();
@@ -229,7 +230,7 @@ namespace DVLD.User
             }
             else
             {
-                errorProvider1.SetError(txtUsername, "");
+                errorProvider1.SetError(txtUsername, null);
             }
         }
 

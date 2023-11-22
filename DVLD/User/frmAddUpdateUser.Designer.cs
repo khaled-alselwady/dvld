@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPagePersonalInfo = new System.Windows.Forms.TabPage();
+            this.ucPersonCard1 = new DVLD.Controls.ucPersonCard();
+            this.btnUpdatePerson = new System.Windows.Forms.Button();
+            this.btnSelectPerson = new System.Windows.Forms.Button();
             this.btnPersonInfoNext = new System.Windows.Forms.Button();
             this.tabPageLoginInfo = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -50,9 +53,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnUpdatePerson = new System.Windows.Forms.Button();
-            this.btnSelectPerson = new System.Windows.Forms.Button();
-            this.ucPersonCard1 = new DVLD.Controls.ucPersonCard();
             this.tabControl1.SuspendLayout();
             this.tabPagePersonalInfo.SuspendLayout();
             this.tabPageLoginInfo.SuspendLayout();
@@ -76,6 +76,7 @@
             // 
             // tabPagePersonalInfo
             // 
+            this.tabPagePersonalInfo.BackColor = System.Drawing.Color.White;
             this.tabPagePersonalInfo.Controls.Add(this.ucPersonCard1);
             this.tabPagePersonalInfo.Controls.Add(this.btnUpdatePerson);
             this.tabPagePersonalInfo.Controls.Add(this.btnSelectPerson);
@@ -86,7 +87,41 @@
             this.tabPagePersonalInfo.Size = new System.Drawing.Size(855, 465);
             this.tabPagePersonalInfo.TabIndex = 0;
             this.tabPagePersonalInfo.Text = "Personal Info";
-            this.tabPagePersonalInfo.UseVisualStyleBackColor = true;
+            // 
+            // ucPersonCard1
+            // 
+            this.ucPersonCard1.BackColor = System.Drawing.Color.White;
+            this.ucPersonCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucPersonCard1.Location = new System.Drawing.Point(9, 94);
+            this.ucPersonCard1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ucPersonCard1.Name = "ucPersonCard1";
+            this.ucPersonCard1.Size = new System.Drawing.Size(839, 300);
+            this.ucPersonCard1.TabIndex = 122;
+            // 
+            // btnUpdatePerson
+            // 
+            this.btnUpdatePerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdatePerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdatePerson.Location = new System.Drawing.Point(543, 46);
+            this.btnUpdatePerson.Name = "btnUpdatePerson";
+            this.btnUpdatePerson.Size = new System.Drawing.Size(136, 40);
+            this.btnUpdatePerson.TabIndex = 121;
+            this.btnUpdatePerson.Text = "Update Person";
+            this.btnUpdatePerson.UseVisualStyleBackColor = true;
+            this.btnUpdatePerson.Visible = false;
+            this.btnUpdatePerson.Click += new System.EventHandler(this.btnUpdatePerson_Click);
+            // 
+            // btnSelectPerson
+            // 
+            this.btnSelectPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectPerson.Location = new System.Drawing.Point(701, 46);
+            this.btnSelectPerson.Name = "btnSelectPerson";
+            this.btnSelectPerson.Size = new System.Drawing.Size(136, 40);
+            this.btnSelectPerson.TabIndex = 120;
+            this.btnSelectPerson.Text = "Select a Person";
+            this.btnSelectPerson.UseVisualStyleBackColor = true;
+            this.btnSelectPerson.Click += new System.EventHandler(this.btnSelectPerson_Click);
             // 
             // btnPersonInfoNext
             // 
@@ -104,6 +139,7 @@
             // 
             // tabPageLoginInfo
             // 
+            this.tabPageLoginInfo.BackColor = System.Drawing.Color.White;
             this.tabPageLoginInfo.Controls.Add(this.pictureBox2);
             this.tabPageLoginInfo.Controls.Add(this.lblUserID);
             this.tabPageLoginInfo.Controls.Add(this.label4);
@@ -123,7 +159,6 @@
             this.tabPageLoginInfo.Size = new System.Drawing.Size(855, 465);
             this.tabPageLoginInfo.TabIndex = 1;
             this.tabPageLoginInfo.Text = "LoginInfo";
-            this.tabPageLoginInfo.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -307,41 +342,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnUpdatePerson
-            // 
-            this.btnUpdatePerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdatePerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdatePerson.Location = new System.Drawing.Point(543, 46);
-            this.btnUpdatePerson.Name = "btnUpdatePerson";
-            this.btnUpdatePerson.Size = new System.Drawing.Size(136, 40);
-            this.btnUpdatePerson.TabIndex = 121;
-            this.btnUpdatePerson.Text = "Update Person";
-            this.btnUpdatePerson.UseVisualStyleBackColor = true;
-            this.btnUpdatePerson.Visible = false;
-            this.btnUpdatePerson.Click += new System.EventHandler(this.btnUpdatePerson_Click);
-            // 
-            // btnSelectPerson
-            // 
-            this.btnSelectPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectPerson.Location = new System.Drawing.Point(701, 46);
-            this.btnSelectPerson.Name = "btnSelectPerson";
-            this.btnSelectPerson.Size = new System.Drawing.Size(136, 40);
-            this.btnSelectPerson.TabIndex = 120;
-            this.btnSelectPerson.Text = "Select a Person";
-            this.btnSelectPerson.UseVisualStyleBackColor = true;
-            this.btnSelectPerson.Click += new System.EventHandler(this.btnSelectPerson_Click);
-            // 
-            // ucPersonCard1
-            // 
-            this.ucPersonCard1.BackColor = System.Drawing.Color.White;
-            this.ucPersonCard1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucPersonCard1.Location = new System.Drawing.Point(9, 94);
-            this.ucPersonCard1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucPersonCard1.Name = "ucPersonCard1";
-            this.ucPersonCard1.Size = new System.Drawing.Size(839, 300);
-            this.ucPersonCard1.TabIndex = 122;
             // 
             // frmAddUpdateUser
             // 
